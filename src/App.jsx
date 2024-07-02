@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Link, HashRouter, MemoryRouter, NavLink } from "react-router-dom"
+import { BrowserRouter, Routes, Route, Link, HashRouter, MemoryRouter, NavLink, Navigate } from "react-router-dom"
 
 import Home from "./components/home"
 import Posts from "./components/posts"
@@ -36,6 +36,11 @@ const App = () => {
           <Route path="posts" element={<Posts/>}/>
           <Route path="posts/:id" element={<PostItem/>}/>
           <Route path="profile" element={<Profile/>}/>
+          {/* <Route path="profile" element={
+            <>
+              <Navigate replace to="/"/>
+            </>
+            }/> */}
           <Route path="/" element={<Home/>}/>
         </Routes>
       </div>

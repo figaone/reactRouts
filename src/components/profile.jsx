@@ -1,4 +1,4 @@
-import { useNavigate, useSearchParams } from "react-router-dom"
+import { useNavigate, useSearchParams, Navigate } from "react-router-dom"
 
 const Profile = () => {
 
@@ -11,7 +11,7 @@ const Profile = () => {
         <>
             <div>Profile</div>
             <button onClick={()=> navigate('/')}>Back home</button>
-            
+            <Navigate replace to="/"/>
         </>
     )
 }
