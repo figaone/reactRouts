@@ -4,6 +4,9 @@ import Home from "./components/home"
 import Posts from "./components/posts"
 import Profile from "./components/profile"
 import PostItem from "./components/postitem"
+import Users from "./components/users"
+import Guests from "./components/guests"
+import Admins from "./components/admins"
 
 const App = () => {
   return(
@@ -31,11 +34,20 @@ const App = () => {
             <NavLink to="profile" className="nav-link">Profile</NavLink>
             </li>
           </ul>
+          <ul className="nav nav-pills">
+            <li className="nav-item">
+            <NavLink to="users" className="nav-link">Users</NavLink>
+            </li>
+          </ul>
         </header>
         <Routes>
           <Route path="posts" element={<Posts/>}/>
           <Route path="posts/:id" element={<PostItem/>}/>
           <Route path="profile" element={<Profile/>}/>
+          <Route path="users" element={<Users/>}>
+            <Route path="guests" element={<Guests/>}/>
+            <Route path="admins" element={<Admins/>}/>
+          </Route>
           {/* <Route path="profile" element={
             <>
               <Navigate replace to="/"/>
