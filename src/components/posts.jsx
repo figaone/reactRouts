@@ -1,4 +1,7 @@
+
+
 const Posts = () => {
+
     return(
         <>
             Posts
